@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual LAN Trunking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="../../img/mylogo.png" class="logo" width="9%" height="9%"></img>
+        <ul>
+            <li><a href="../../index.html" >Home</a></li>
+            <li><a href="../../profile.html" >Profile</a></li>
+            <li><a href="../../project.html" class="active">project</a></li>
+            <li><a href="../../contact.html" >Contact</a></li>
+            <li><a href="../../service1.html" >service</a></li>
+        </ul>
+    </header>
+
+      <div id="content-wrap">
+        <div id="content">
+          <div id="sidebar" >
+            <div class="sep"></div>
+            <div class="sidebox">
+              <h1>Sidebar Menu</h1>
+              <ul class="sidemenu">
+                <li><a href="#main">VLAN</a></li>
+                <li><a href="#ping google">ping google </a></li>
+                <li><a href="#update Software">update Software </a></li>
+                <li><a href="#repository">repostory </a> </li>
+                <li><a href="#setting port 22">setting port 22 </a> </li>
+                <li><a href="#ip">ip Debian</a> </li>
+                <li><a href="#ip Conf">Configurasi Ip</a> </li>
+              </ul>
+            </div>
+            <div class="sidebox">
+              <h1>Project lainya</h1>
+              <ul class="sidemenu">
+                <li><a href="../website-kalkulator/index.html">Calculator website</a></li>
+                <li><a href="../blog debian 1/index.html">Linux Debian 11 'Bullseye'</a></li>
+                <li><a href="../blog debian 3/index.html">Remote Server</a></li>
+                <li><a href="../blog debian 4/index.html">Virtual Host</a></li>
+                <li><a href="../blog debian 5/index.html">configurasi Bind9</a></li>
+              </ul>
+            </div>
+            <div class="sidebox">
+              <h1>Kata Kata Hari Ini</h1>
+              <p>&quot;“Risk more than other think is safe. Care more than other think is wise. Dream more than other think is practical. 
+                Expect more than other think is possible”&quot;</p>
+              <p class="align-right">- Om Tegar</p>
+            </div>
+          </div>
+          <div id="main">
+            <div class="box"> <a name="opening"></a>
+              <h1><a href="index.html">debian 11  <span class="white">Virtual LAN Trunking (VLAN Trunking)</span></a></h1>
+              <p class="post-by">Posted by <a href="../../index.html">Tegar Dito</a></p>
+              <p> <a href="../../profile.html"><strong> Om Tegar- </strong> </a> 
+                Virtual LAN (VLAN) merupakan sekelompok perangkat pada satu LAN atau lebih yang dikonfigurasikan 
+                (menggunakan perangkat lunak pengelolaan) sehingga dapat berkomunikasi seperti halnya bila perangkat 
+                tersebut terhubung ke jalur yang sama, padahal sebenarnya perangkat tersebut berada pada sejumlah 
+                segmen LAN yang berbeda. Vlan dibuat dengan menggunakan jaringan pihak ketiga. VLAN merupakan 
+                sebuah bagian kecil jaringan IP yang terpisah secara logika.</p>
+              <p class="post-footer align-right"> <a href="../../project.html" class="readmore">Read more</a> 
+                <a href="../../contact.html" class="comments">Comments </a> <span class="date">April, 12 2022</span> </p>
+            </div>
+            <div class="box"> <a name="ping google"></a>
+              <h1><a href="index.html">debian 11  <span class="white">Virtual LAN Trunking (VLAN Trunking)</span></a></h1>
+              <p class="post-by">Posted by <a href="../../index.html">Tegar Dito</a></p>
+              <p> <a href="../../profile.html"><strong> Om Tegar- </strong> </a> 
+                Linux Debian 11 Terminal</p>
+              <p> Jika Kemarin Kita Sudah Mempersiapkan Debian Kita untuk Proses Selanjutnya
+                kita akan lanjut setup IP Debian Tersebut Terlebih Dahulu, Bagi Teman Teman yang Belum Membaca
+                Blog Kita Sebelumnya <a href="../blog debian 1/index.html">Linux Debian 11 'Bullseye'</a>
+              </p>
+
+              <p>Untuk langkah Pertama Kita akan Mengecek Koneksi Debian itu sendiri
+                dengan cara "ping google.com". sebelum melakukan ping pastikan anda sudah masuk ke
+                <a href="../blog debian 1/index.html">root Terminal.</a> 
+              </p>
+              <img src="images/ping Google.jpg" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <p>ping google.com berfungsi untuk mengecek ping layanan internet pada debian kita. Dan Untuk Memberhintakan
+                ping Silahkan Klik Secara Bersamaan <strong>CTRL + C</strong>
+              </p>
+              <div></div>
+              <h3>Code</h3>
+              <p><code>ping google.com</code></p>
+              <p><code>CTRL + C</code></p>
+            </div>
+
+            <div class="box" id="update Software">
+              <h2>Mengupdate Software/Perangkat Lunak</h2>
+              <p>
+                Setelah Kita Cek Koneksi Kita , Kita Akan 
+                ketikan <a href="#getupdate">“apt-get update”</a> untuk mengupdate perangkat lunak 
+
+              </p>
+              <img src="images/apt get update.jpg" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <div></div>
+              <h3>Code</h3>
+              <p id="getupdate"><code>apt-get update</code></p>
+            </div>
+
+            <div class="box" id="repository">
+              <h2>repostory</h2>
+              <p>Selanjutnya Adalah repository Dengan Cara ketikan perintah “nano /etc/apt/sources.list”  
+                lalu setelah muncul seperti gambar di atas , gunakan arrow pada keyboard untuk mengubah <strong>posisi mengetik pada bagian 2 baris di bawah 
+                <a href="#kartolo"># deb-src http://deb.debian.org/debian bullseye-update main contrib</a></strong> lalu ketikan       
+              </p>
+              <img src="images/kartolo.jpg" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <div></div>
+              <h3 id="kartolo">Code</h3>
+              <p><code>nano /etc/apt/sources.list</code></p>
+              <img src="images/kartolo1.jpg" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <h3>Code</h3>
+              <p><code>deb http://kartolo.sby.datautama.net.id/debian/ bullseye main contrib non-free</code></p>
+              <p><code>deb http://kartolo.sby.datautama.net.id/debian/ bullseye updates main contrib non free</code></p>
+              <p><code>deb http://kartolo.sby.datautama.net.id/debian-security/ bullseye/updates main contrib non-free</code></p>
+              <p>Lalu <strong>Klick Ctrl + X lalu Y dan enter</strong> dan setelah melakukan perubahan tersebut silahkan lakukan Add CD rom.</p>
+              <img src="images/kartolo2.jpg" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <p><code>apt-get update</code></p>
+              <p><code>apt-get upgrade</code></p>
+            </div>
+
+            <div class="box" id="setting port 22">
+              <h2>setting port 22</h2>
+              <p>ketikan <a href="#port22">nano/etc/apt/ssh_config</a> untuk perintah host jalan maka yang awalnya #port 22 pada bagian “#” di hapus
+              </p>
+              <img src="images/port22.jpg" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <div></div>
+              <h3 id="port22">Code</h3>
+              <p><code>nano/etc/apt/ssh_config</code></p>
+              <p><code># port 22 --> port 22</code></p>
+              <p>Untuk save perubahan Kita ctrl + x lalu Y dan enter,selanjutnya Kita Akan Reset Ulang ssh</p>
+              <img src="images/Restart ssh.jpg" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <p><code>systemctl Restart ssh</code></p>
+              <p>untuk Mengecek ssh Kita akan cetus ssh</p>
+              <img src="images/status ssh.jpg" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <p>
+                kita bisa cek status dengan<code>systemctl status ssh</code> lalu untuk keluar 
+              kita menggunakan ctrl + c</p>
+            </div>
+
+            <div class="box" id="ip">
+              <h2>iP Debian</h2>
+              <p>pengecekan an ip bisa di lakukan dengan perintah “ip a” / “ip -c a”. sebagai contoh saya akan 
+                menggunakan ip a
+              </p>
+              <img src="images/ip Debian.jpg" alt="" class="float-left"style="width: -webkit-fill-available;">
+              <div></div>
+              <h3>Code</h3>
+              <p><strong>Note: pada 2: epn0s3 (10.0.2.15/24) adalah ip kita.
+
+              </strong><code>ip a</code></p>
+            </div>
+
+            <div class="box" id="ip Conf">
+              <h2>Configurasi Ip</h2>
+              <p>Kita akan Mulai Konfigurasi Ip Debian Kita , hal ini dapat di lakukan 
+                dengan mengetikkan kode <a href="#interfaces">nano /etc/network/interfaces</a> untuk mengisi internet interface 
+              </p>
+              <img src="images/interfaces.jpg" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <div></div>
+              <h3 id="interfaces">Code</h3>
+              <p><code>nano /etc/network/interfaces</code>
+              Setelah Kita masuk ke Network interfaces kita ketikkan seperti berikut:</p>
+              <img src="images/interfaces1.jpg" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <p>
+              <code>
+                auto enp0s3</code>
+                <code>iface enp0s3 inet static</code>
+                      <code>address 192.168.1.111</code>
+                      <code>subnetmask 255.255.255.0</code>
+                      <code>gateway 192.168.1.1</code>
+                    <code>#dns nameserver 8.8.8.8</code>
+              </p>
+              <p>pada bagian ip address bedakan dengan ip virtual box dan dekstop kita (buka command promt). 
+                hal ini untuk mengatur perintah internet interface sebelum digunakan agar addres tidak bertabrakan 
+              </p>
+              <img src="images/host only.jpg" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <p>selanjutnya kita ubah pada attached to “NAT” menjadi attached to “host-only adapter” untuk menyambungkan ke internet pada device kita . dan terakhir
+                kita akan cek ip yang sudah kita rubah 
+              </p>
+              <img src="images/ip1.jpg" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <p>kita restart networking nya terlebih dahulu, bebas kalian bisa menggunakan "systemctl restart networking" atau "/etc/init.d/networking restart"</p>
+              <p><code>systemctl restart networking</code></p>
+              <p><code>/etc/init.d/networking restart</code></p>
+              <p>lalu kita cek ip kita<code>ip a</code></p>
+              
+            </div>
+
+            <div class="box">
+              <p>
+                Terimakasih untuk yang sudah mengikuti blog ini sampai akhir.
+                untuk kelanjutanya adalah Remote Server di debian
+                atau kalian bisa click  <a href="../blog debian 3/index.html">Remote server</a>
+                silahkan tinggalkan komentar anda di <a href="../../contact.html">contact</a> jika
+                mengalami kesulitan.
+                <p class="post-footer align-right"> <a href="../../project.html" class="readmore">Read more</a> 
+                  <a href="../../contact.html" class="comments">Comments </a> <span class="date">April, 14 2022</span> </p>
+              </p>
+            </div>
+            <br />
+          </div>
+</body>
+</html>

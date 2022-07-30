@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debian 11 Setup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+      <img src="../../img/mylogo.png" class="logo" width="9%" height="9%"></img>
+        <ul>
+            <li><a href="../../index.html" >Home</a></li>
+            <li><a href="../../profile.html" >Profile</a></li>
+            <li><a href="../../project.html" class="active">project</a></li>
+            <li><a href="../../contact.html" >Contact</a></li>
+            <li><a href="../../service1.html" >service</a></li>
+        </ul>
+    </header>
+
+      <div id="content-wrap">
+        <div id="content">
+          <div id="sidebar" >
+            <div class="sep"></div>
+            <div class="sidebox">
+              <h1>Sidebar Menu</h1>
+              <ul class="sidemenu">
+                <li><a href="#main">IP</a></li>
+                <li><a href="#startup">Setup Host name</a></li>
+                <li><a href="#domain">Setup Domain name</a></li>
+                <li><a href="#root">Setup ROOT password</a> </li>
+                <li><a href="#pss">Setup password Login</a> </li>
+                <li><a href="#compname">Rename Computer</a> </li>
+                <li><a href="#terminal">Terminal</a> </li>
+              </ul>
+            </div>
+            <div class="sidebox">
+              <h1>Project lainya</h1>
+              <ul class="sidemenu">
+                <li><a href="../website-kalkulator/index.html">Calculator website</a></li>
+                <li><a href="../blog debian 2/index.html">Virtual LAN Trunking</a></li>
+                <li><a href="../blog debian 3/index.html">Remote Server</a></li>
+                <li><a href="../blog debian 4/index.html">Virtual Host</a></li>
+                <li><a href="../blog debian 5/index.html">configurasi Bind9</a></li>
+              </ul>
+            </div>
+            <div class="sidebox">
+              <h1>Kata Kata Hari Ini</h1>
+              <p>&quot;“Risk more than other think is safe. Care more than other think is wise. Dream more than other think is practical. 
+                Expect more than other think is possible”&quot;</p>
+              <p class="align-right">- Om Tegar</p>
+            </div>
+          </div>
+          <div id="main">
+            <div class="box"> <a name="opening"></a>
+              <h1><a href="index.html">Linux  <span class="white">Debian 11 'Bullseye'</span></a></h1>
+              <p class="post-by">Posted by <a href="../../index.html">Tegar Dito</a></p>
+              <p> <a href="../../profile.html"><strong> Om Tegar- </strong> </a> Debian adalah sistem operasi yang hebat dalam dirinya sendiri, 
+                tetapi juga, itu membuat basis yang sangat baik untuk distribusi Linux lainnya juga. Misalnya, Ubuntu mungkin adalah distro Linux 
+                paling terkenal di dunia, dan berbasis Debian. Ada banyak sistem operasi lain, seperti deepin Linux, yang juga berdiri di atas bahu figuratif Debian. 
+                Itulah mengapa sangat penting ketika versi baru Debian dirilis.
+              </p>
+
+              <p>Dan Hari Ini Kita akan Belajar Setup Debian Itu Sendiri Sebelum kita masuk pada tahap 
+                Virtual LAN Trunking (VLAN Trunking). pada blog selanjutnya.
+              </p>
+
+              <p class="post-footer align-right"> <a href="../../project.html" class="readmore">Read more</a> 
+                <a href="../../contact.html" class="comments">Comments </a> <span class="date">April, 12 2022</span> </p>
+            </div>
+            <div class="box"> <a name="startup"></a>
+              <h1><a href="index.html">Linux  <span class="white">Debian 11 'Bullseye'</span></a></h1>
+              <p class="post-by">Posted by <a href="../../index.html">Tegar Dito</a></p>
+              <p> <a href="../../profile.html"><strong> Om Tegar- </strong> </a> 
+                SETUP DEBIAN</p>
+              <p>Pastikan anda sudah berhasil melakukan instalasi debian 11, dan sudah masuk pada menu setup debian
+                pada bagian host name sebagai contoh kita gunakan nama - nama kelas - no.absen. lalu click continue.
+              </p>
+              <img src="images/host name debian.png" alt="" class="float-left">
+              <div></div>
+              <h3>Code</h3>
+              <p><code> TegarDitoXT5-33</code></p>
+            </div>
+
+            <div class="box" id="domain">
+              <h2>Domain Name</h2>
+              <p>setelah mengisi host name kalian akan di mintai untuk mengisi domain
+              </p>
+              <img src="images/domain.png" alt="" class="float-left">
+              <div></div>
+              <h3>Code</h3>
+              <p><code> moklet.TegarDitoXT5-33.sch.id</code></p>
+            </div>
+
+            <div class="box" id="root">
+              <h2>password ROOT user</h2>
+              <p>setelah kalian menentukan nama domain kalian, langkah berikutnya kalian 
+                akan di minta untuk mengisi password root sebanyak 2 kali, <h>NOTE</h> wajib di ingat ingat 
+                untuk password root tersebut karena akan sangat sering di gunakan di step berikutnya.
+              </p>
+              <img src="images/root.png" alt="" class="float-left">
+              <div></div>
+              <h3>Code</h3>
+              <p><code>rootT533</code></p>
+            </div>
+
+            <div class="box" id="pss">
+              <h2>password LOGIN user</h2>
+              <p>setelah kalian menentukan password root , kalian juga
+                akan di minta untuk mengisi password login / password user sebanyak 2 kali, <h>NOTE</h> wajib di ingat ingat 
+                untuk password login tersebut karena itu adalah password untuk memasuki debian kalian.
+              </p>
+              <img src="images/pass login.png" alt="" class="float-left">
+              <div></div>
+              <h3>Code</h3>
+              <p><code>tegarT533</code></p>
+            </div>
+
+            <div class="box" id="compname">
+              <h2>Rename Computer</h2>
+              <p>silahkan gunakan nama kalian untuk rename komputer karena hal tersebut mempermudah kita untuk
+                mengingat nya.
+              </p>
+              <img src="images/rename comp.png" alt="" class="float-left">
+              <div></div>
+              <h3>Code</h3>
+              <p><code>TegarDitoPriandika</code></p>
+            </div>
+
+            <div class="box" id="terminal">
+              <h2>Terminal</h2>
+              <p>setelah debian terinstall untuk memasukki debian kalian akan dimintai
+                password, password yang harus di masukkan adalah <a href="#pss">click disini</a>
+              </p>
+              <p>Setelah berhasil masukk silahkan click ACTIVITIES di pojok
+                kiri atas lalu ketikkan "TERMINAL". lalu ketik "su" 
+              untuk memasuki menu root dan masukkan <a href="#root">password root</a>
+            tidak usah khawatir karena password yang kita input memang INVISIBLE</p>
+              <img src="images/terminal.png" alt="" class="float-left">
+              <div></div>
+              <h3>Code</h3>
+              <p><code>$ su</code></p>
+              <p>
+              <code>password: rootT533</code>
+              </p>
+            </div>
+
+            <div class="box">
+              <p>
+                Terimakasih untuk yang sudah mengikuti blog ini sampai akhir.
+                untuk kelanjutan configurasi Virtual Lan Trunking selajutnya akan di jelaskan di part 2
+                atau kalian bisa click  <a href="../blog debian 2/index.html">IP Configuration Part 2</a>
+                silahkan tinggalkan komentar anda di <a href="../../contact.html">contact</a> jika
+                mengalami kesulitan.
+                <p class="post-footer align-right"> <a href="../../project.html" class="readmore">Read more</a> 
+                  <a href="../../contact.html" class="comments">Comments </a> <span class="date">April, 12 2022</span> </p>
+              </p>
+            </div>
+            <br />
+          </div>
+</body>
+</html>

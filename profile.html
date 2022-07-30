@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <header id="landing">
+        <img src="img/mylogo.png" class="logo" width="9%" height="9%"></img>
+        <ul>
+            <li><a href="index.html" >home</a></li>
+            <li><a href="profile.html" class="active">profile</a></li>
+            <li><a href="project.html" >Project</a></li>
+            <li><a href="contact.html" >contact</a></li>
+            <li><a href="service1.html" >service</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <img src="img/stars.png" id="star" >
+        <img src="img/moon.png" id="moon" >
+        <h2 id="text" style="font-size: 150px;">Hii, Mokleters</h2>
+    </section>
+
+    <div class="kolom" id="myprofile" >
+        <div class="flex">
+            <img src="img/profile1.jpg" id="ProfileHover" class="ProfileHover" width="300" height="300" style="border-radius: 50%; ">
+        </div>
+
+        <div class="flex1">
+            <h3 class="">About me</h3>
+            <p class="">I am an allround web developer. I am a senior programmer with good knowledge of front-end techniques. 
+                Vitae sapien pellentesque habitant morbi tristique senectus et. Aenean sed adipiscing diam donec adipiscing tristique risus.</p>
+            <div></div>
+            <p class="">Image by <a href="" class="tbl1">@Tega_r.dp</a>
+            </p>
+        </div>
+
+        <div class="flex1">
+            <div class="">
+              <h3 class="">Details</h3>
+              <p class="">
+                <span style="font-weight: 700;">Name: </span>
+                <br>Tegar Dito Priandika<br>
+                <span style="font-weight: 700;">Age: </span>
+                <br>16 years <span style="font-weight: 700;">
+                  <br>Location: 
+                </span>
+                <br>Indonesia,Jawatimur,kab.Malang
+              </p>
+            </div>
+          </div>
+    </div>
+
+    <div class="container" id="contact">
+
+        <div class="parallax-window" data-parallax="scroll" data-image-src="img/profile2.jpg"></div>
+
+
+        <section class="contact">
+            <div class="color"></div>
+            <div class="box">
+                <div class="square" style="--i:0"></div>
+                <div class="square" style="--i:1"></div>
+                <div class="square" style="--i:2"></div>
+                <div class="square" style="--i:3"></div>
+                <div class="square" style="--i:4"></div>
+                <div class="container1">
+                    <div class="form">
+                        <h2>Contact Us</h2>
+                        <form action="">
+                            <div class="inputBx">
+                                <input type="text" placeholder="Full Name">
+                            </div>
+                            <div class="inputBx">
+                                <input type="email" placeholder="Email">
+                            </div>
+                            <div class="inputBx">
+                                <textarea name="message" id="" placeholder="Type Mesage Here..."></textarea>
+                            </div>
+                            <div class="inputBx">
+                                <input type="submit" value="Submit" href="index.html">
+                            </div>
+                            <p class="text">pastikan pesan yang ingin anda sampaikan sudah anda tulis</p>
+                            <p class="text">untuk kembali ke atas <a href="#contact.sh">Click Disini</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+
+        
+    </div>
+    <div class=""></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script>$('.parallax-window').parallax({imageSrc: 'img/profile2.jpg'});</script>
+    <script>
+        let text= document.getElementById('text');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            text.style.right = value *10 + 'px';
+        })
+    </script>
+</body>
+</html>

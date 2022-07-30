@@ -1,0 +1,487 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#421f7b,#7597de);
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 1000;
+}
+
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #2b1055;
+}
+
+a {
+	color: #24cc46;
+	background-color: inherit;
+	text-decoration: none;		
+}
+a:hover {
+	color: #FAA34B; 
+	background-color: inherit;
+	text-decoration: underline;	
+	border: none;
+}
+
+/* headers */
+h1, h2, h3 ,p{
+	font: bold 1em 'Trebuchet MS', Tahoma, Arial, Sans-serif;
+	color: #fff;
+}
+h1 { font-size: 2.5em; } 
+h2 { font-size: 2em; text-transform:uppercase;}
+h3 { font-size: 1.8em; }
+
+p, h1, h2, h3 {
+	margin: 0;
+	padding: 10px 15px;
+}
+
+ul, ol {
+	margin: 10px 30px;
+	padding: 0 15px;	
+}
+
+/* images */
+img.float-right {
+   margin: .5em 0 1em 1em;   
+}
+img.float-left {
+   margin: .5em 1em 1em 0;
+   padding: 5%;
+}
+
+code {
+  margin: .5em 0;
+  display: block;
+  padding: 20px;
+  text-align: left; 
+  overflow: auto;  
+  font: 500 1em/1.5em 'Lucida Console', 'Courier New', monospace ;
+  /* white-space: pre; */
+  background: #1E89DC;
+  border: 1px solid #0065C6;   
+}
+acronym {
+  cursor: help;
+  border-bottom: 1px solid #0065C6;
+}
+blockquote {
+	margin: 10px 15px;
+ 	padding: 10px 0 10px 28px;  
+   border: 1px solid #0065C6;
+	background: #1E89DC; 
+  	font: bold 1.3em/1.5em "Century Gothic", "Trebuchet MS", Helvetica, Arial, Geneva, sans-serif;
+}
+
+/* start - table */
+table {
+	margin: 10px 15px; 
+	border-collapse: collapse;			
+}
+th strong {
+	color: #fff;
+}
+th {
+	background: #93BC0C;
+	height: 3em;
+	padding-left: 12px;
+	padding-right: 12px;
+	color: #FFF;
+	text-align: left;
+	border-left: 1px solid #B6D59A;
+	border-bottom: solid 2px #8EB200; 
+	border-top: solid 2px #8EB200;
+}
+tr {
+	color: #707070;
+	height: 2.5em;	
+}
+td {
+	padding-left: 12px;
+	padding-right: 12px;
+	border-left: 1px solid #FFF;
+	border-bottom: solid 1px #ffffff;
+}
+td.first,th.first {
+	border-left: 0px;
+}
+tr.row-a {
+	background: #F8F8F8;
+}
+tr.row-b {
+	background: #EFEFEF;
+}
+/* end - table */
+
+/* form elements */
+form {
+	margin: 10px 15px; 
+	padding: 10px;
+	border: 1px solid #0065C6; 
+	background-color: #1E89DC; 
+}
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+label {
+	display:block;
+	font-weight:bold;
+	margin: .4em 0;	
+}
+input {
+	padding: .3em;
+	border: 1px solid #eee;
+	font: normal 1em Verdana, sans-serif;
+	color:#777;
+}
+textarea {
+	width: 55%;
+	padding: .3em;
+	font: normal 1em/1.5em Verdana, sans-serif;
+	border: 1px solid #eee;
+	height: 10em;
+	display:block;
+	color:#777;
+}
+input.button { 
+	font: bold 1em Arial, Sans-serif; 
+	margin: 0;
+	padding: .25em .3em;
+	color: #FFF;
+	background: #A2CC00;
+	border: 2px solid #8EB200;
+}
+
+/* search form */
+.searchform {
+	background-color: transparent;
+	border: none;	
+	margin: 0 0 0 10px; padding: 0 0 1.5em 0;	
+	width: 18em;	
+}
+.searchform p { margin: 0; padding: 0; }
+.searchform input.textbox { 
+	width: 11em;
+	color: #777; 
+	padding: .4em; 
+	border: 1px solid #E5E5E5;
+	vertical-align: top;
+}
+.searchform input.button { 
+	width: 60px;
+	vertical-align: top;
+}
+
+/***********************
+	  LAYOUT
+************************/
+
+#header-content, #content, #nav {
+/*
+The width value below sets the total width of the design. It's default value is set to 93%
+which means that it will take up 93% of the browser window's width. You can also set it to a 
+different percentage	value (90%, 85%, etc.). This design is fluid layout by default, but you
+can turn it into a fixed width layout by setting a pixel value to the width (e.g. 900px, 950px).
+*/
+	width: 93%;	
+}
+
+/* box */
+.box {
+	margin: 10px 0;	
+	padding: 10px 10px 20px 10px;		
+	border: 5px solid #000000;
+    background: rgba(255,255,255,0.1);
+	box-shadow: 0 25px 45px rgb(0,0,0,0.1);
+    border: 1px solid rgb(255,255,255,0.5);
+    border-right: 1px solid rgb(255,255,255,0.2);
+    border-bottom: 1px solid rgb(255,255,255,0.2);	
+}
+
+/* Navigation */
+#nav-wrap {
+	float: left;
+	width: 100%;
+	background: url(menubg.jpg) repeat-x left bottom; 
+	clear: both;
+}
+#nav {
+	clear: both;	
+	margin: 0 auto;
+	padding: 0;		
+}
+#nav ul {
+	float: left;
+	list-style: none;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;	
+	height: 64px;		
+}
+#nav ul li {
+	float: left;
+	margin: 0; padding: 0;
+	height: 64px;
+}
+#nav ul li a {
+	display: block;
+	float: left;
+	width: auto;
+	margin: 0;
+	padding: 0 15px;
+	color: #FFF;
+	font: bold 15px "Century Gothic", "Trebuchet MS", Helvetica, Arial, Geneva, sans-serif;
+	text-decoration: none;	
+	letter-spacing: 1px;	
+}
+#nav ul li a:hover, 
+#nav ul li a:active {
+	color: #333;	
+}
+#nav ul li#current {	
+	background: url(nav-current.jpg) no-repeat center bottom;		
+}
+#nav ul li#current a {
+	color: #333;
+}
+
+/* content */
+#content-wrap {
+	clear: both;
+	float: left;	
+	width: 100%;
+    margin-top: 100px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgb(0,0,0,0.1);
+    border: 1px solid rgb(255,255,255,0.5);
+    border-right: 1px solid rgb(255,255,255,0.2);
+    border-bottom: 1px solid rgb(255,255,255,0.2);
+}
+#content {
+	text-align: left;	
+	padding: 0; 
+	margin: 0 auto;		
+}
+
+/* sidebar */
+#sidebar {
+	float: right;
+	width: 21em;
+	margin: 10px 0 10px -21em; padding: 0;		
+}
+#sidebar h1 {
+	font: bold 1.75em 'Trebuchet MS', Tahoma, Arial, Sans-serif;
+	padding: .3em 0 .5em 10px; 
+	color: #d7632d;	
+}
+#sidebar ul.sidemenu {
+	list-style:none;
+	margin: 0;
+	padding: .3em 0 1em 5px;		
+	font-family: 'Trebuchet MS', Tahoma, Sans-serif;		
+}
+#sidebar ul.sidemenu li {
+	padding: 0; 
+	background: url(sidebullet.gif) no-repeat .3em .5em;		
+}
+
+* html body #sidebar ul.sidemenu li { height: 1%; }
+
+#sidebar ul.sidemenu li a {
+	display: block;
+	font-weight: bold;
+	color: #E8F4FF;	
+	text-decoration: none;
+	padding: .2em 0 .2em 30px;
+	line-height: 1.5em;
+	font-size: 1.35em;
+}
+#sidebar ul.sidemenu li a:hover {
+	background: #0F7ACC url(sidebullet.gif) no-repeat .25em .45em;	
+	color: #FFF;			
+}
+#sidebar ul.sidemenu ul{
+	margin-left: 15px;
+}
+
+#sidebar .sidebox {
+	margin: 5px 15px 5px 0;
+	padding: 0;
+	background: url(sidebarsep.jpg) repeat-x left bottom;
+}
+#sidebar .sep{
+	background: url(sidebarsep.jpg) repeat-x left bottom;
+	height: 2px;
+	margin: 0px 15px 10px 0;
+	clear: both;
+}
+
+/* main */
+#main {
+	margin: 10px 23em 10px 0; 
+	padding: 0;		
+}
+#main h1 { 
+	font: bold 2.8em 'Trebuchet MS', Arial, Sans-serif;
+	color: #B1E100;
+	letter-spacing: -2px;		
+	padding-bottom: 0;	
+}
+#main h1 a {
+	color: #B1E100;
+	text-decoration: none;
+}
+
+/* footer */
+#footer-wrap {
+	clear: both;
+	border-top: 5px solid #86CC15;
+	text-align: left;
+	padding: 1.6em 0;	
+}
+#footer-wrap a {
+	text-decoration: none;
+	color: #5B9CFF;
+	font-weight: bold;
+}
+#footer-wrap a:hover {
+	color: #E8F4FF;	
+}
+#footer-wrap p {
+	padding: 10px 0;
+}
+#footer-wrap h2 {
+	color: #E8F4FF;
+	margin: 0;
+	padding: 0 10px; 
+	text-transform: none;
+}
+
+/* footer columns */
+#footer-columns {
+	color: #5B9CFF;
+	margin: 0 auto; 
+	padding: 0;	
+	width: 90%;	
+}
+#footer-columns ul {
+	list-style: none;
+	margin: 10px 0 0 0; 
+	padding: 0;	
+	background: url(footer-dots.jpg) repeat-x left top;	
+}
+#footer-columns li {
+	background: url(footer-dots.jpg) repeat-x left bottom;		
+}
+#footer-columns li a {
+	display: block;
+	font-weight: normal;
+	padding: .5em 0 .5em 1em;
+	width: 96%;
+}
+#footer-columns .col3, .col3-center {
+	float: left;
+	width: 32%;
+}
+#footer-columns .col3-center { 
+	margin: 0 15px; 
+}
+
+/* bottom */
+#footer-bottom {
+	clear: both;
+	color: #E8F4FF;	
+	margin: 0 auto; 
+	padding: 1em 0;
+	text-align: center;
+}
+
+/* alignment classes */
+.float-left  { float: left; }
+.float-right { float: right; }
+.align-left  {	text-align: left; }
+.align-right {	text-align: right; }
+
+/* additional classes */
+.clear { clear: both; }
+.white {	color: #E8F4FF; }
+
+img.rssfeed {
+	border: none; 
+	padding: 0 0 5px 0;
+	background: transparent;
+}
+
+.post-by {
+	font-size: .95em;	
+	padding-top: 0;
+}
+.post-footer { 
+	text-align: right; 
+	background: #1E89DC;
+	border: 1px solid #0065C6; 
+	padding: 8px 10px;
+	margin: 20px 15px 10px 15px;
+}
+.post-footer .date {
+	background: url(clock.gif) no-repeat left center;
+	padding-left: 20px; margin: 0 3px 0 3px;
+}
+.post-footer .comments {
+	background: url(comment.gif) no-repeat left center;
+	padding-left: 	20px; margin: 0 3px 0 3px;
+}
+.post-footer .readmore {
+	background: url(page.gif) no-repeat left center;
+	padding-left: 20px; margin: 0 3px 0 3px;
+}

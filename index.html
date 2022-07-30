@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>company profile</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <header id="landing">
+        <img src="img/mylogo.png" class="logo" width="9%" height="9%"></img>
+        <ul>
+            <li><a href="#particles-js" class="active">home</a></li>
+            <li><a href="profile.html" >profile</a></li>
+            <li><a href="project.html" >Project</a></li>
+            <li><a href="contact.html" >contact</a></li>
+            <li><a href="service1.html" >service</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="img/stars.png" id="star" >
+        <img src="img/moon.png" id="moon" >
+        <h2 id="text" style="top: 700px; margin-top: 0px;">SEKTEMA</h2>
+        <a href="#isian" id="btn">starting today</a>
+        <img src="img/mountains_front.png" id="mountains_front" >
+    </section>
+    <div class="isian" id="particles-js">
+        <script src=""></script>
+        <div class="count-particles"></div>
+        <div id="isian">
+        <h2>Ambil Risiko, Bermimpi Lebih Besar, dan Berharap Besar</h2>
+        <br></br>
+        <p>
+        “Risk more than other think is safe. Care more than other think is wise. Dream more than other think is practical. Expect more than other think is possible”
+        </p>
+
+        <div class="kolom" id="myprofile" >
+            <div class="flex">
+                <img src="img/profile1.jpg" id="ProfileHover" class="ProfileHover" width="300" height="300" style="border-radius: 50%; ">
+            </div>
+    
+            <div class="flex1">
+                <h2 class="">About me</h2>
+                <p class="">
+                    <span style="font-weight: 700;">Name: </span>
+                    <br>Tegar Dito Priandika<br>
+                </p>    
+                <p class="">I am an allround web developer. I am a senior programmer with good knowledge of front-end techniques. 
+                    Vitae sapien pellentesque habitant morbi tristique senectus et. Aenean sed adipiscing diam donec adipiscing tristique risus.</p>
+                <p class="">Image by <a href="" class="tbl1">@Tega_r.dp</a>
+                </p>
+            </div>
+
+        </div>
+        <a href="#landing" id="pct">Go Back And Do it</a>
+        </div>
+    </div>
+
+
+    <script>
+        let star = document.getElementById('star');
+        let moon = document.getElementById('moon');
+        let text= document.getElementById('text');
+        let btn= document.getElementById('btn');
+        let mountains_front= document.getElementById('mountains_front');
+        let header = document.querySelector('header')
+        let pct = document.getElementById('pct');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            star.style.left = value *0.5 + 'px';
+            moon.style.top = value *0.5 + 'px';
+            mountains_front.style.top = value *0 + 'px';
+            text.style.marginTop = value *-2 + 'px';
+            header.style.top = value *0.15 + 'px';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my service</title>
+    <link rel="stylesheet" href="css/service1.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <header id="landing" 
+    style=
+    "position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;">
+        <img src="img/mylogo.png" class="logo" width="9%" height="9%"></img>
+        <ul>
+            <li><a href="index.html" >home</a></li>
+            <li><a href="profile.html" >profile</a></li>
+            <li><a href="project.html" >Project</a></li>
+            <li><a href="contact.html" >contact</a></li>
+            <li><a href="service1.html" class="active">service</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <img src="img/stars.png" id="star" >
+        <img src="img/moon.png" alt="" style="mix-blend-mode: screen; margin: top 20px;;">
+        <h2 id="text" style="font-size: 150px;">Available Service </h2>
+        <a href="#kolom1" id="btn" style="margin-left:570px; margin-top: 100px; z-index: 1000;">Check now </a>
+        
+    </section>
+    <section class="kolom" id="kolom1">
+        <div class="container">
+                <div class="col-md-3 col-sm-6 ">
+                    <div class="service-box">
+                        <div class="service-icon yellow">
+                            <div class="front-content">
+                                <i class="fa fa-trophy"></i>
+                                <h3>design</h3>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>design</h3>
+                            <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" id="btn">learn more</a>
+                </div>
+                <div class="col-md-3 col-sm-6 ">
+                    <div class="service-box">
+                        <div class="service-icon orange">
+                            <div class="front-content">
+                                <i class="fa fa-anchor"></i>
+                                <h3>web Developer</h3>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>web developer</h3>
+                            <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" id="btn">learn more</a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="service-box ">
+                        <div class="service-icon red">
+                            <div class="front-content">
+                                <i class="fa fa-trophy"></i>
+                                <h3>Ui Developer</h3>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Developer</h3>
+                            <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" id="btn">learn more</a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="service-box">
+                        <div class="service-icon grey">
+                            <div class="front-content">
+                                <i class="fa fa-paper-plane-o"></i>
+                                <h3>java script</h3>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>java script</h3>
+                            <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" id="btn">learn more</a>
+                </div>
+        </div>
+
+    </section>
+    <section>
+    </section>
+
+    <script>
+        let text= document.getElementById('text');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollX;
+            text.style.right = value *10 + 'px';
+        })
+    </script>
+
+</body>
+</html>

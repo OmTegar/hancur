@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055,#7597de);
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 1000;
+}
+
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #2b1055;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator{
+    margin-top: 80px;
+    padding: 16px;
+    border-radius: 30px;
+    background-color: #d3d3d2;
+    display: grid;
+    grid-template-columns: repeat(4,68px);
+    box-shadow: inset 5px 5px 12px #fff, 5px 5px 12px rgba (0,0,0,16);
+}
+input{
+    height: 70px;
+    width: 270px;
+    grid-column: span 4;
+    background-color: #ecf0d3;
+    box-shadow: inset 5px 5px 12px #fff, 5px 5px 12px rgba (0,0,0,16);
+    border: none;
+    border-radius: 20px;
+    color: black;
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+button{
+    background-color: #ecf0f3;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 5px 5px 12px #fff, 5x 5px 12px black;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: red;
+    color: white;
+}
+.hasil{
+    width: 115px;
+    border-radius: 45px;
+    box-shadow: inset 5px 5px 12px #fff, 5px 5px 12px rgba (0,0,0,16);
+    background-color: #ecf0f3;
+}

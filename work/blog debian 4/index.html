@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual host</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="../../img/mylogo.png" class="logo" width="9%" height="9%"></img>
+        <ul>
+            <li><a href="../../index.html" >Home</a></li>
+            <li><a href="../../profile.html" >Profile</a></li>
+            <li><a href="../../project.html" class="active">project</a></li>
+            <li><a href="../../contact.html" >Contact</a></li>
+            <li><a href="../../service1.html" >service</a></li>
+        </ul>
+    </header>
+
+      <div id="content-wrap">
+        <div id="content">
+          <div id="sidebar" >
+            <div class="sep"></div>
+            <div class="sidebox">
+              <h1>Sidebar Menu</h1>
+              <ul class="sidemenu">
+                <li><a href="#main">virtual host</a></li>
+                <li><a href="#install">Install apache2 </a></li>
+                <li><a href="#html">Doctype Html Debian</a></li>
+                <li><a href="#apache2">Konfigurasi apache2</a> </li>
+                <li><a href="#"></a> </li>
+              </ul>
+            </div>
+            <div class="sidebox">
+              <h1>Project lainya</h1>
+              <ul class="sidemenu">
+                <li><a href="../website-kalkulator/index.html">Calculator website</a></li>
+                <li><a href="../blog debian 1/index.html">Linux Debian 11 'Bullseye'</a></li>
+                <li><a href="../blog debian 2/index.html">Virtual LAN Trunking </a></li>
+                <li><a href="../blog debian 3/index.html">Remote Server </a></li>
+                <li><a href="../blog debian 5/index.html">configurasi Bind9</a></li>
+              </ul>
+            </div>
+            <div class="sidebox">
+              <h1>Kata Kata Hari Ini</h1>
+              <p>&quot;“Risk more than other think is safe. Care more than other think is wise. Dream more than other think is practical. 
+                Expect more than other think is possible”&quot;</p>
+              <p class="align-right">- Om Tegar</p>
+            </div>
+          </div>
+          <div id="main">
+            <div class="box"> <a name="opening"></a>
+              <h1><a href="index.html">debian 11  <span class="white">Virtual Host</span></a></h1>
+              <p class="post-by">Posted by <a href="../../index.html">Tegar Dito</a></p>
+              <p> <a href="../../profile.html"><strong> Om Tegar- </strong> </a> 
+                Virtual Host adalah metode yang digunakan untuk menambahkan banyak domain dalam satu server. Artinya, Anda bisa membuat banyak website dengan domain berbeda pada server yang sama.
+              </p>
+              <p class="post-footer align-right"> <a href="../../project.html" class="readmore">Read more</a> 
+                <a href="../../contact.html" class="comments">Comments </a> <span class="date">April, 17 2022</span> </p>
+            </div>
+            <div class="box"> <a name="install"></a>
+              <h1><a href="index.html">debian 11  <span class="white">Virtual Host</span></a></h1>
+              <p class="post-by">Posted by <a href="../../index.html">Tegar Dito</a></p>
+              <p> <a href="../../profile.html"><strong> Om Tegar- </strong> </a> 
+                Linux Debian 11 Virtual Host
+              </p>
+              <p>sebelum masuk ke tutorial Virtual LAN Trunking debian 11, pastikan anda sudah
+                mengikuti langkah langkah sebelum nya atau <a href="../../project.html">click disini</a>
+                jika di rasa kalian sudah mengikuti tutorial dengan baik. silahkan di coba untuk melakukan 
+                Virtual host.
+              </p>
+              <p>Virtual Host adalah kelanjutan dari <a href="../blog debian 3/index.html">Virtual Lan Trunking</a> jadi bagi temen temen yang belum mengikuti langkah langkah sebelumnya silahkan click link tersebut.
+              Tetap di root terminal debian 11 , pertama tama pastikan CDROM debian sudah di aktifkan, lalu langkah berikutnya ubah network debianyang sudah kita ganti menjadi bridge adapter kita kembalikan kembali menjadi NAT. untuk tau caranya bisa <a href="../blog debian 3/index.html">click disini</a>
+              jika sidah silahkan restart networking.
+              </p>
+              <p><code>systemctl restart networking</code></p>
+              <p>lalu kita install apache2 dengan mengetikkan "apt-get install apache2" dan tunggu hingga selesai.</p>
+              <p><code>apt-get install apache2</code></p>
+              <p><code>systemctl status apache2</code></p>
+              <p>selanjutnya kita matikan kembali CDROM dan kita kita kembalikan network menjadi bridge adapter dan jangan lupa kita restart networking kita</p>
+              <p><code>systemctl restart networking</code></p>
+              <img src="images/status apache2.png" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <p>jika apache2 sudah aktif click ctrl + c untuk keluar dan selanjutnya masukkan ip kalian di firefox, dengan cara masuk pada activities lalu click firefox atau bisa di cari di search bar.</p>
+              <img src="images/firefox apache2.png" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <p>Pastikan ip kita sudah terhubung ke apache2.</p>
+            </div>
+
+            <div class="box"><a name="html"></a>
+            <p>Kita akan Masuk pada folder html kita /var/www/html</p>
+            <p><code>cd /</code></p>
+            <p><code>cd /var/www/html</code></p>
+            <p><code>ls</code></p>
+            <img src="images/cek folder html.png" alt="" class="float-left" style="width: -webkit-fill-available;">
+            <p>normalnya ketika di "ls" file yang muncul hanyalah index.html , jadi kita akan buat folder kita terlebih dahulu dengan perintah sebagai berikut:</p>
+            <p name="namafolderhtml"><code>mkdir <a href="#namafolderhtml">tegarT533</a> <--(nama folder)</code></p>
+            <p><code>cd tegarT533 </code></p>
+            <p><code>nano index.html</code></p>
+            <img src="images/index html.png" alt="" class="float-left" style="width: -webkit-fill-available;">
+            <p>kita mengetikkan html kita dengan di dalam file index html tersebut jika sudah , kalian bisa ctrl + x untuk simpan perubahan dan klik Y untuk menyetujui perubahan tersebut.
+              kita akan kembali ke firefox dan silahkan ketikan ip address kalian , dan pastikan apa yang kalian tulis dalam folder html sudah tampil pada firefox.
+            </p>
+            <p id="ip firefox"><code>192.168.1.33/tegarT533</code></p>
+            <img src="images/cek ip firefox.png" alt="" class="float-left" style="width: -webkit-fill-available;" >
+            <div><p>jika terjadi error silahkan cek network kalian apakah sudah di bridge adapter atau belum , lalu masukkan perintah. "ip a" untuk cek ip kalian , dan jika di rasa sudah benar silahkan cek index html kalian.</p></div>
+            </div>
+
+            <div class="box"><a name="apache2"></a>
+            <p>Selanjutnya Kita akan konfigurasi apache2, hal ini dilakukan agar kita tidak perlu menuliskan nama folder setelah ip kita. dan hal ini dilakukan agar kita bisa menambahkan domain kita pada blog selanjutnya. okehh kita masuk ke folder apache2 terlebih dahulu.</p>
+            <p><code>cd /</code></p>
+            <p><code>cd /etc/apache2/sites-available</code></p>
+            <p><code>ls</code></p>
+            <img src="images/ls folder sites available.png" alt="" class="float-left" style="width: -webkit-fill-available;">
+            <p>Normalnya Folder tegarT533.conf masih belum ada , dan isi dari folder tersebut adalah file copy dari 000-default.conf jadi bagaimana cara untuk membuat foldernya?</p>
+            <p name="copy"><code>cp 000-default.conf <a href="#copy">tegarT533.conf</a> <-- nama file copy</code></p>
+            <img src="images/copy folder 000.png" alt="" class="float-left" style="width: -webkit-fill-available;">
+            <p><code>nano tegarT533.conf </code></p>
+            <img src="images/isi folder sites-available.png" alt="" class="float-left" style="width: -webkit-fill-available;">
+            <p>normalnya noname.com adalah localhost jadi nama ip kita, di baris kedua jangan lupa tambahkan nama folder kalian di /var/ww/html kalian</p>
+            <p name="admin"><code>Server admin webmaster@<a href="#admin">noname.com</a> <-- nama domain</code></p>
+            <p><code>DocumentRoot /var/www/html/<a href="#admin">tegarT533</a> <-- nama folder di var/www/html</code></p>
+            <p><code>serveralias www.<a href="#admin">noname.com </a><-- nama domain</code></p>
+            <p>Setelah kita konfigurasi di sites-available selesai silahkan klik "ctrl + x" lalu "Y" dan kita akan lanjut untuk copy folder kita di folder sites-enabled dengan cara</p>
+            <p><code>cp tegarT533.conf /etc/apache2/sites-enabled</code> lalu kita cek folder sites sites-enabled</p>
+            <p><code>cd ../sites-enabled</code></p>
+            <p><code>ls</code></p>
+            <p>jika folder tegarT533.conf sudah muncul di sites enabled silahkan hapus file 000-default.conf</p>
+            <img src="images/hapus 000 enabled.png" alt="" class="float-left" style="width: -webkit-fill-available;">
+            <p><code>rm 000-default.conf</code></p>
+            <p><code>ls</code></p>
+            <p><code>systemctl restart apache2</code></p>
+            <p>jika dirasa sudah melakukan konfigurasi apache2 tanpa masalah silahkan kembali ke firefox dan coba masukkan pada search bar hanya ip saja seperti 
+              <a href="#ip firefox">contoh di atas</a> konfigurasi apache2 sudah selesai dan silahkan simak blog selanjutnya ya.
+            </p>
+            </div>
+
+            <div class="box">
+              <p>
+                Terimakasih untuk yang sudah mengikuti blog ini sampai akhir.
+                untuk kelanjutanya adalah Configurasi bind9 di debian
+                atau kalian bisa click  <a href="../blog debian 5/index.html">Configurasi bind9</a>
+                silahkan tinggalkan komentar anda di <a href="../../contact.html">contact</a> jika
+                mengalami kesulitan.
+                <p class="post-footer align-right"> <a href="../../project.html" class="readmore">Read more</a> 
+                  <a href="../../contact.html" class="comments">Comments </a> <span class="date">April, 17 2022</span> </p>
+              </p>
+            </div>
+            <br />
+          </div>
+</body>
+</html>

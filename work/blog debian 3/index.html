@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Server</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="../../img/mylogo.png" class="logo" width="9%" height="9%"></img>
+        <ul>
+            <li><a href="../../index.html" >Home</a></li>
+            <li><a href="../../profile.html" >Profile</a></li>
+            <li><a href="../../project.html" class="active">project</a></li>
+            <li><a href="../../contact.html" >Contact</a></li>
+            <li><a href="../../service1.html" >service</a></li>
+        </ul>
+    </header>
+
+      <div id="content-wrap">
+        <div id="content">
+          <div id="sidebar" >
+            <div class="sep"></div>
+            <div class="sidebox">
+              <h1>Sidebar Menu</h1>
+              <ul class="sidemenu">
+                <li><a href="#main">Remote Server</a></li>
+                <li><a href="#install">Install putty </a></li>
+                <li><a href="#terminal">Ip + Host Name </a></li>
+                <li><a href="#running system putty">running system putty </a> </li>
+                <li><a href="#ping">Cek Koneksi </a> </li>
+              </ul>
+            </div>
+            <div class="sidebox">
+              <h1>Project lainya</h1>
+              <ul class="sidemenu">
+                <li><a href="../website-kalkulator/index.html">Calculator website</a></li>
+                <li><a href="../blog debian 1/index.html">Linux Debian 11 'Bullseye'</a></li>
+                <li><a href="../blog debian 2/index.html">Virtual LAN Trunking </a></li>
+                <li><a href="../blog debian 4/index.html">Virtual Host</a></li>
+                <li><a href="../blog debian 5/index.html">configurasi Bind9</a></li>
+              </ul>
+            </div>
+            <div class="sidebox">
+              <h1>Kata Kata Hari Ini</h1>
+              <p>&quot;“Risk more than other think is safe. Care more than other think is wise. Dream more than other think is practical. 
+                Expect more than other think is possible”&quot;</p>
+              <p class="align-right">- Om Tegar</p>
+            </div>
+          </div>
+          <div id="main">
+            <div class="box"> <a name="opening"></a>
+              <h1><a href="index.html">debian 11  <span class="white">Remote Server</span></a></h1>
+              <p class="post-by">Posted by <a href="../../index.html">Tegar Dito</a></p>
+              <p> <a href="../../profile.html"><strong> Om Tegar- </strong> </a> 
+                remote server adalah teknologi yang memungkinkan pengguna untuk mengakses sebuah server dan jaringan dari jarak jauh. Jadi meskipun tidak menggunakan jaringan LAN yang sama dengan server, pengguna server tetap bisa mengakses dan mengontrol server tanpa harus ke lokasi.</p>
+              <p class="post-footer align-right"> <a href="../../project.html" class="readmore">Read more</a> 
+                <a href="../../contact.html" class="comments">Comments </a> <span class="date">April, 16 2022</span> </p>
+            </div>
+            <div class="box"> <a name="install"></a>
+              <h1><a href="index.html">debian 11  <span class="white">Remote Server</span></a></h1>
+              <p class="post-by">Posted by <a href="../../index.html">Tegar Dito</a></p>
+              <p> <a href="../../profile.html"><strong> Om Tegar- </strong> </a> 
+                Linux Debian 11 Remote Server
+              </p>
+              <p>sebelum masuk ke tutorial remote server debian 11, pastikan anda sudah
+                mengikuti langkah langkah sebelum nya atau <a href="../../project.html">click disini</a>
+                jika di rasa kalian sudah mengikuti tutorial dengan baik. silahkan di coba untuk melakukan 
+                remote server.
+              </p>
+              <p>Pertama silahkan install putty pada windows kalian, atau bisa <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank">click disini.</a>
+              </p>
+              <img src="images/putty.png" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <div></div>
+              <p>Pastikan anda Mendownload Putty sesuai dengan spesifikasi komputer kalian.</p>
+              <img src="images/putty1.png" alt="" class="float-left" style="width: -webkit-fill-available;">
+              <p>Lalu instalasi seperti biasa  dan jalankan file putty.exe</p>
+            </div>
+            <div class="box"><a name="terminal"></a>
+            <h2>Ip + Hostname</h2>
+            <p>masuk pada terminal yang ada di debian lalu ketikan “su” untuk masuk ke root dan masukkan kode root , dan ketikan “ ip -c a ”</p>
+            <img src="images/ip.png" alt="" class="float-left" style="width: -webkit-fill-available;">
+            <h3>code</h3>
+            <p><code>su</code></p>
+            <p><code>ip -c a</code></p>
+            <img src="images/putty2.png" alt="" class="float-left" style="width: -webkit-fill-available;">
+            <p>setelah itu masuk pada putty dan masukkan ip debian kalian.</p>
+            </div>
+            <div class="box"><a name="running system putty"></a>
+            <h2>running system putty</h2>
+            <p>login menggunakan host name , cara gampang buat melihatnya kalian bisa melihat pada root debian tepatnya pada oktet setelah  “ /home/………. ”. 
+              lalu password yang di minta adalah password untuk login debian
+            </p>
+            <img src="images/putty3.png" alt="" class="float-left" style="width: -webkit-fill-available;">
+            <p>Tidak Perlu Khawatir karna password yang kita masukkan di putty memang invisible, jadi tidak usah panik.</p>
+            <img src="images/putty4.png" alt="" class="float-left" style="width: -webkit-fill-available;">
+            <p>setelah berhasil login silahkan ketikkan “ ip a ” pada putty. dan pastikan ip yang muncul adalah 
+              ip yang sama dengan yang muncul pada debian.
+            </p>
+            <p><code>ip a</code></p>
+            </div>
+            <div class="box"><a name="ping"></a>
+            <h2>Cek Koneksi </h2>
+            <p>buka command promt atau cmd bisa dengan shortcut “ windows + R ” 
+              lalu kita ketikkan “ ping (ip debian) ” untuk mengecek apakah server tersebut berjalan.
+            </p>
+            <p><code>windows + R</code></p>
+            <img src="images/ping.png" alt="" class="float-left" style="width: -webkit-fill-available;">
+            <p><code>ping 192.168.1.33</code></p>
+            <p>pastikan yang muncul pada command promt adalah reply from(ip) / reply from 192.168.1.33</p>
+            </div>
+
+
+            <div class="box">
+              <p>
+                Terimakasih untuk yang sudah mengikuti blog ini sampai akhir.
+                untuk kelanjutanya adalah Virtual Hostdi debian
+                atau kalian bisa click  <a href="../blog debian 3/index.html">Virtual host</a>
+                silahkan tinggalkan komentar anda di <a href="../../contact.html">contact</a> jika
+                mengalami kesulitan.
+                <p class="post-footer align-right"> <a href="../../project.html" class="readmore">Read more</a> 
+                  <a href="../../contact.html" class="comments">Comments </a> <span class="date">April, 16 2022</span> </p>
+              </p>
+            </div>
+            <br />
+          </div>
+</body>
+</html>
